@@ -16,7 +16,7 @@ test('agregar producto al carrito', async ({ page }) => {
   await addToCartBtn.click();
 
   // 4. Validar el contador del carrito
-  const badge = page.locator('[data-test="shopping-cart-badge"]');
+  const badge = page.locator('xpath=//button[@data-test="add-to-cart-sauce-labs-bike-light"]')
   await expect(badge).toBeVisible();
   await expect(badge).toHaveText('1');
 });
